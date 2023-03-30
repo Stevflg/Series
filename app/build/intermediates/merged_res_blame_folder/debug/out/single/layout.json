@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Jorge\\.gradle\\daemon\\7.5\\com.example.series.app-mergeDebugResources-28:\\layout\\item_series.xml",
+        "source": "C:\\Users\\Jorge\\.gradle\\daemon\\7.5\\com.example.series.app-main-31:\\layout\\item_series.xml"
+    },
+    {
+        "merged": "com.example.series.app-mergeDebugResources-28:/layout/activity_series_data.xml",
+        "source": "com.example.series.app-main-31:/layout/activity_series_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jorge\\.gradle\\daemon\\7.5\\com.example.series.app-mergeDebugResources-28:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Jorge\\.gradle\\daemon\\7.5\\com.example.series.app-main-31:\\layout\\activity_main.xml"
+    }
+]

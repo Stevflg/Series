@@ -1,5 +1,6 @@
 package com.example.series
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -41,8 +42,12 @@ class MainActivity : AppCompatActivity() {
                 "https://image.tmdb.org/t/p/original/lqcDVZ8pyk08AVftMBildDR3QUK.jpg",
                 "En una realidad distópica repleta de corrupción e implantes cibernéticos, un joven talentoso e impulsivo intenta convertirse en un mercenario.")
         )
-
-
+        series.add(
+            Series("Cyberpunk: Edgerunners",
+                "2022",
+                "https://image.tmdb.org/t/p/original/lqcDVZ8pyk08AVftMBildDR3QUK.jpg",
+                "En una realidad distópica repleta de corrupción e implantes cibernéticos, un joven talentoso e impulsivo intenta convertirse en un mercenario.")
+        )
 
 
 
@@ -50,6 +55,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.ListaSeries.adapter=adapter
 
+        binding.ListaSeries.setOnItemClickListener { parent, view, position, id ->
+            val intent= Intent(MainActivity@this,SeriesDataActivity::class.java ).apply{
+            putExtra("TITLE",series[id.toInt()].title)
+            putExtra("DESCRIPCION", series[id.toInt()].description)
+            putExtra("PICTURE", series[id.toInt()].imageurl)
+            putExtra("YEAR",series[id.toInt()].year)
+            }
+            startActivity(intent)
+        }
 
 
     }
